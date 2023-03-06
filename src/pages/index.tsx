@@ -1,8 +1,19 @@
+import React from "react";
+import { styled } from "../styles";
 
-import React from 'react';
+const Button = styled("button", {
+  backgroundColor: "$primary",
+  borderRadius: 4,
+  padding: "4px 8px",
+  span: {
+    fontWeight: "bold",
+  },
+
+  ":hover": {
+    filter: "brightness(0.8)",
+  },
+});
 
 export default function Home() {
-  return (
-   <h1>Hello Wolrd</h1>
-  );
+  return <h1>Hello Wolrd</h1>;
 }
