@@ -1,8 +1,17 @@
-import React from "react"
+import React from "react";
+import { globalStyles } from "../styles/global";
+import { Container, Header } from "../styles/pages/app";
+import logoImg from "../assets/logoImg.svg";
+import Image from "next/image";
 
-
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+globalStyles();
+export default function App({ Component, pageProps }) {
+  return (
+    <Container>
+      <Header>
+        <Image src={logoImg} alt=""/>
+      </Header>
+      <Component {...pageProps} />;
+    </Container>
+  );
 }
-
-export default MyApp
